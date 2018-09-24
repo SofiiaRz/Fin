@@ -50,7 +50,6 @@ public class GroupList implements Serializable {
 		}
 		if (groupsList[groupsList.length - 1] != null) {
 			groupsList = Arrays.copyOf(groupsList, groupsList.length + 1);
-			groupsList[groupsList.length - 1] = group;
 		}
 		for (int i = 0; i < groupsList.length; i++) {
 			if (groupsList[i] == null) {
