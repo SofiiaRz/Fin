@@ -79,6 +79,9 @@ public class GroupList implements Serializable {
 	public void saveGroupListToFiles() throws IOException {
 		try {
 			for (int i = 0; i < groupsList.length; i++) {
+				if (groupsList[i] == null) {
+					throw new IllegalArgumentException("Null group");
+				}
 				SaveFromToFile.loadToFile(groupsList[i], this.folder);
 			}
 		} catch (IOException e) {
