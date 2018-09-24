@@ -76,17 +76,14 @@ public class GroupList implements Serializable {
 		return null;
 	}
 
-	public boolean saveGroupListToFiles() throws IOException {
-		boolean check = false;
+	public void saveGroupListToFiles() throws IOException {
 		try {
 			for (int i = 0; i < groupsList.length; i++) {
 				SaveFromToFile.loadToFile(groupsList[i], this.folder);
-				check = true;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return check;
 	}
 
 	public boolean deleteGroup(int groupNumber) {
